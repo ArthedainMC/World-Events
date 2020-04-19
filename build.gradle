@@ -1,0 +1,31 @@
+subprojects {
+    apply plugin: 'java-library'
+
+    sourceCompatibility = targetCompatibility = 1.8
+    compileJava.options.encoding = compileTestJava.options.encoding = 'UTF-8'
+
+    repositories {
+        mavenCentral()
+        maven { url = "https://repo.aikar.co/content/groups/aikar/" }
+        maven { url = "https://hub.spigotmc.org/nexus/content/groups/public/" }
+        maven { url 'https://jitpack.io' }
+        maven { url = "https://repo.aikar.co/content/groups/aikar/" }
+    }
+
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    artifacts {
+        archives sourcesJar
+    }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
+
+}

@@ -1,0 +1,33 @@
+plugins {
+  //  id 'com.github.johnrengelman.shadow' version '4.0.4'
+    id 'java'
+}
+
+group = "cz.arthedain"
+version = "1.0-SNAPSHOT"
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
+compileJava {
+    options.compilerArgs += ["-parameters"]
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+}
+
+dependencies {
+    annotationProcessor "org.spigotmc:plugin-annotations:1.2.2-SNAPSHOT"
+
+    compile project(':Common')
+
+    compile "co.aikar:acf-paper:0.5.0-SNAPSHOT"
+    compile 'com.google.inject:guice:4.1.0'
+
+    compileOnly "org.spigotmc:plugin-annotations:1.2.2-SNAPSHOT"
+    compileOnly 'org.spigotmc:spigot-api:1.15.2-R0.1-SNAPSHOT'
+}
+
+//shadowJar {
+//    relocate 'co.aikar.commands', '[YOUR PLUGIN PACKAGE].acf'
+//}
+
+//build.dependsOn shadowJar

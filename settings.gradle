@@ -1,0 +1,8 @@
+rootProject.name = "World-Events"
+
+include ':Spigot'
+include ':Common'
+
+
+project(':Spigot').projectDir = file('Spigot')
+project(':Common').projectDir = file('Common')

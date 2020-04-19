@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.arthedain.worldevents.common.WorldEventServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-19T20:29:52" hostname="JA-PC" time="0.147">
+  <properties/>
+  <testcase name="a()" classname="cz.arthedain.worldevents.common.WorldEventServiceTest" time="0.147"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

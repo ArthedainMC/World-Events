@@ -23,7 +23,12 @@ dependencies {
     compile 'com.google.inject:guice:4.1.0'
 
     compileOnly "org.spigotmc:plugin-annotations:1.2.2-SNAPSHOT"
-    compileOnly 'org.spigotmc:spigot-api:1.15.2-R0.1-SNAPSHOT'
+    compileOnly("com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 //shadowJar {
